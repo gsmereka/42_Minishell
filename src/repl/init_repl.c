@@ -6,7 +6,7 @@
 /*   By: gde-mora <gde-mora@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 23:09:03 by gsmereka          #+#    #+#             */
-/*   Updated: 2023/03/05 01:28:16 by gde-mora         ###   ########.fr       */
+/*   Updated: 2023/03/05 00:29:56 by gde-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ void	init_repl(t_data *data)
 		if (!is_valid(data->user_input))
 			break ;
 		save_input_on_history(data->user_input);
+		//execute_built_in(data);
 		init_lexer(data);
 		init_expander(data); //se o usuário mandou alguma var de ambiente  --- $
-		execute_built_in(data);
+		
 		//print p teste
 	/*	t_token *aux_print = data->tokens;
 		while (aux_print)
